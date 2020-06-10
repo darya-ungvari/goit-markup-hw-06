@@ -387,17 +387,23 @@
                     <!-- подпишитесь на рассылку -->
                     <div class="footer-followus">
                         <b class="follow-us">ПОДПИСАТЬСЯ НА РАССЫЛКУ</b> 
-                        <input class="ur-email" type="text" name="first_name" placeholder="E-mail">
-                        <button class="button">
-                            Подписаться
-                            <svg class="icon-send" width="24px" height="24px">
-                                <use href="./images/symbol-defs.svg#icon-send"></use>
-                            </svg>
-                        </button>
+                        <!-- <input class="ur-email" type="text" name="first_name" placeholder="E-mail"> -->
+                        <form class="js-speaker-form" action="">
+                            <label for="email">Email
+                                <input type="email" name="email" id="email">
+                            </label>
+                            <button class="button" type="submit">
+                                Подписаться
+                                <svg class="icon-send" width="24px" height="24px">
+                                    <use href="./images/symbol-defs.svg#icon-send"></use>
+                                </svg>
+                            </button>
+                        </form>
                     </div>
         </div>     
         <p class="copyright"> 2020 | Developed by GoIT Students </p>
     </footer>
+    <script src="./js/model.js"></script>
 </body>
 </html>
 

@@ -608,7 +608,7 @@ h2, h3 {
     text-align: center;
     padding-top: 23px;
     
-    width: calc((1200px - 150px) /6);
+    width: 170px;
 
     border: 1px solid #AFB1B8 ;
     border-radius: 4px;
