@@ -52,7 +52,39 @@
     <section class="hero"> 
             <div class="overlay">
                 <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br> ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-                <a href="" class="button">Заказать услугу</a> 
+                <button class="button" data-model-open>Заказать услугу</button>
+                <div class="backdrop" data-model> <!-- add class vissually-hidden-->
+                    <div class="modal">
+                        <form class="form js-speaker-form">
+                            <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+                            <div class="form-field">
+                                <label class="form-label" for="name">Имя</label>
+                                <input class="form-input" type="text" name="name" id="name" autofocus>
+                            </div>                            
+                            <div class="form-field">
+                                <label class="form-label" for="tel">Телефон</label>
+                                <input class="form-input" type="tel" name="tel" id="tel">
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="email">Почта</label>
+                                <input class="form-input" type="email" name="email" id="email">
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label" for="comment">Комментарий</label>
+                                <textarea name="comment" id="comment" cols="30" rows="10"></textarea>   
+                            </div>
+                            <div class="form-field policy">
+                                <input class="form-input" type="checkbox" name="policy" id="policy" value="policy" checked>
+                                <label class="form-label" for="policy">Соглашаюсь с рассылкой и принимаю 
+                                    <a href="">Условия договора</a>
+                                </label>
+                            </div>
+                            <button class="button" type="submit">Отправить</button>
+                    
+                        </form>
+                        <!-- <button data-model-close>Закрыть</button> -->
+                    </div>
+                </div>                
             </div>
     </section>
     <!--Наши преимущества-->
@@ -404,6 +436,19 @@
         <p class="copyright"> 2020 | Developed by GoIT Students </p>
     </footer>
     <script src="./js/model.js"></script>
+    <script>
+         (() => {
+             document
+                .querySelector('.js-speaker-form')
+                .addEventListener('submit', e => {
+                    e.preventDefault();
+
+                 new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                 );   
+             });
+         })();
+    </script>
 </body>
 </html>
 
