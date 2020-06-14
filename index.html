@@ -21,7 +21,7 @@
                         <a class="site-nav-links" href="./portfolio.html"> Портфолио </a>  
                     </li>
                     <li class="item"> 
-                        <a class="site-nav-links" href="" class="site-nav-links"> Контакты </a>  
+                        <a class="site-nav-links" href=""> Контакты </a>  
                     </li>
                 </ul>
             <!--Contacts-->
@@ -56,33 +56,39 @@
                 <div class="backdrop" data-model> <!-- add class vissually-hidden-->
                     <div class="modal">
                         <form class="form js-speaker-form">
-                            <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
-                            <div class="form-field">
-                                <input class="form-input input-name" 
-                                    type="text" 
-                                    name="name" 
-                                    id="name" 
-                                    autofocus 
-                                    placeholder=" ">
-                                <label class="form-label" for="name">Имя</label>
-                            </div>                            
-                            <div class="form-field">
-                                <input class="form-input input-phone" 
-                                    type="tel" 
-                                    name="tel" 
-                                    id="tel"
-                                    placeholder=" ">
-                                <label class="form-label" for="tel">Телефон</label>
-                            </div>
-                            <div class="form-field">
-                                <input class="form-input input-email" 
-                                    type="email" 
-                                    name="email" 
-                                    id="email"
-                                    placeholder=" ">
-                                <label class="form-label" for="email">Почта</label>
-                            </div>
-                            <div class="form-field">
+                            <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>  
+                                <label class="form-field" for="name">
+                                    <span class="form-label">Имя</span>
+                                    <input class="form-input" 
+                                        type="text" 
+                                        name="name" 
+                                        autofocus 
+                                        placeholder=" ">
+                                    <svg class="icon-input" width="18px" height="18px">
+                                        <use href="./images/symbol-defs.svg#person"></use>
+                                    </svg>
+                                </label>
+                                <label class="form-field">
+                                    <span class="form-label">Телефон</span>
+                                    <input class="form-input" 
+                                        type="tel" 
+                                        name="tel" 
+                                        placeholder=" ">
+                                    <svg class="icon-input" width="18px" height="18px">
+                                        <use href="./images/symbol-defs.svg#phone-black"></use>
+                                    </svg>    
+                                </label>
+                                <label class="form-field">
+                                    <span class="form-label">Почта</span>
+                                    <input class="form-input" 
+                                        type="email" 
+                                        name="email" 
+                                        placeholder=" ">
+                                        <svg class="icon-input" width="18px" height="18px">
+                                            <use href="./images/symbol-defs.svg#email-black"></use>
+                                        </svg>
+                                </label>
+                            <div class="form-field comment-field">
                                 <textarea class="comment" 
                                     name="comment" 
                                     id="comment" 
@@ -99,7 +105,7 @@
                             </div>
                             <button class="button" type="submit">Отправить</button>
                             <button class="close-button">
-                                <svg class="close-svg">
+                                <svg class="close-svg" width="18px" height="18px">
                                     <use href="./images/symbol-defs.svg#close"></use>
                                 </svg>
                             </button>
@@ -147,7 +153,7 @@
                     <p class="feauter-description">
                         Равным образом консультация с широким активом в значительной степени обуславливает.
                     </p>                      
-                </li class="feauter-item icon-astronaut">
+                </li>
                 <li class="feauter-item icon-astronaut">
                     <div class="feauter-bg">
                         <svg class="feauter-svg">
@@ -458,20 +464,21 @@
         </div>     
         <p class="copyright"> 2020 | Developed by GoIT Students </p>
     </footer>
-    <script src="./js/model.js"></script>
     <script>
-         (() => {
-             document
-                .querySelector('.js-speaker-form')
-                .addEventListener('submit', e => {
-                    e.preventDefault();
-
-                 new FormData(e.currentTarget).forEach((value, name) =>
-                    console.log(`${name}: ${value}`),
-                 );   
-             });
-         })();
-    </script>
+        (() => {
+          document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+              e.preventDefault();
+  
+              new FormData(e.currentTarget).forEach((value, name) =>
+                console.log(`${name}: ${value}`),
+              );
+  
+              e.currentTarget.reset();
+            });
+        })();
+      </script>
 </body>
 </html>
 
