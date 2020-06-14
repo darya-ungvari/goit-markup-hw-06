@@ -94,6 +94,10 @@ a {
 
 }
 
+.radio-button:focus {
+    outline: 1px solid var(--accent-color);
+}
+
 /* утилиты */
 
 .list {
@@ -501,6 +505,10 @@ a {
 
     display: flex;
     align-items: center;
+}
+
+.close-button:focus {
+    outline: 1px solid  rgba(204, 204, 204, 1);
 }
 
 .button.submit {
@@ -1164,6 +1172,7 @@ portfolio
     position: relative;
     overflow: hidden;
     margin-bottom: 20px;
+    border-radius: 4px;
 
 }
 
