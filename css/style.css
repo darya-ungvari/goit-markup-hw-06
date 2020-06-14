@@ -72,6 +72,10 @@ a {
     
 }
 
+.button:focus {
+    outline: 1px solid var(--accent-color); 
+}
+
 .radio-button {
 
     display: inline-block;
@@ -1066,6 +1070,7 @@ a {
     padding-right: 28px;
     justify-content: space-between;
 }
+
 .icon-send {
     position: absolute;
     top: 50%;
