@@ -447,24 +447,28 @@
                     </div>
                     <!-- подпишитесь на рассылку -->
                     <div class="footer-followus">
-                        <b class="follow-us">ПОДПИСАТЬСЯ НА РАССЫЛКУ</b> 
+                        <b class="follow-us-title">ПОДПИСАТЬСЯ НА РАССЫЛКУ</b> 
                         <!-- <input class="ur-email" type="text" name="first_name" placeholder="E-mail"> -->
-                        <form class="js-speaker-form" action="">
-                            <label for="email">Email
-                                <input type="email" name="email" id="email">
-                            </label>
-                            <button class="button" type="submit">
-                                Подписаться
-                                <svg class="icon-send" width="24px" height="24px">
-                                    <use href="./images/symbol-defs.svg#icon-send"></use>
-                                </svg>
-                            </button>
-                        </form>
+                            <form class="footer-form js-speaker-form">
+                                <label class="form-field footer" for="email">  
+                                    <input class="form-input footer"
+                                    type="email" 
+                                    name="email"
+                                    placeholder=" ">
+                                    <span class="form-label">Email</span>
+                                </label>
+                                <button class="footer-button button" type="submit">
+                                    Подписаться
+                                    <svg class="icon-send" width="24px" height="24px">
+                                        <use href="./images/symbol-defs.svg#icon-send"></use>
+                                    </svg>
+                                </button>
+                            </form>
                     </div>
         </div>     
         <p class="copyright"> 2020 | Developed by GoIT Students </p>
     </footer>
-    <!-- <script>
+    <script>
         (() => {
           document
             .querySelector('.js-speaker-form')
@@ -478,7 +482,7 @@
               e.currentTarget.reset();
             });
         })();
-      </script> -->
+      </script>
       <script src="./js/modal.js"></script>
 </body>
 </html>
