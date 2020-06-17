@@ -391,12 +391,6 @@ a {
     margin-bottom: 28px;
 }
 
-.form-input {
-    padding-top: 12px;
-    padding-left: 42px;
-
-}
-
 .form-input:not(:placeholder-shown),
 .form-input:focus {
    outline: 1px solid var(--accent-color);
