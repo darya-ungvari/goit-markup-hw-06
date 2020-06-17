@@ -424,8 +424,7 @@ a {
     
 } 
 
-.form-field.comment-field {
-    position: relative;  
+.form-field.comment-field { 
     margin-bottom: 20px;
 }
 
@@ -476,6 +475,7 @@ a {
     display: inline-block;
     border: 2px solid black;
     border-radius: 3px;
+    margin-left: 12px;
     margin-right: 4px;
 
     transition: var(--animation-timing-function);
@@ -496,6 +496,7 @@ a {
     letter-spacing: 0.03em;
     display: block;
     margin-bottom: 30px;
+    margin-left: ;
     align-items: center;
 }
 
