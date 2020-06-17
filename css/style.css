@@ -513,15 +513,17 @@ a {
     cursor: pointer;
 
     position: absolute;
-    top: -10px;
-    right: -10px;
+    top: 8px;
+    right: 8px;
 
     display: flex;
     align-items: center;
 }
-
 .close-button:focus {
-    outline: 1px solid  rgba(204, 204, 204, 1);
+    outline: 1px solid  rgba(204, 204, 204, 1); 
+}
+.close-button:focus .close-svg {
+    fill: var(--accent-color);
 }
 
 .button.submit {
